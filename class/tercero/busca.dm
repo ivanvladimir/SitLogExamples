@@ -13,7 +13,7 @@ diag_mod(busca(Obj),
         type ==> seeing,
         arcs ==> [
             encontro(Obj,Q,X):[di(Q,X),voltea(derecha)]=>me2,
-            encontro(Obj,high,si):ve(cerca_mesa)=>encontro(Obj,high,si)
+            encontro(Obj,high,si):ve(cerca_mesa)=>encontro(Obj,si)
         ]
     ],
     [
@@ -25,7 +25,7 @@ diag_mod(busca(Obj),
         ]
     ],
     [
-        id ==> encontro(Obj,high,si),
+        id ==> encontro(Obj,si),
         type ==> final
     ]
 ],

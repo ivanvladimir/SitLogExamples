@@ -31,7 +31,7 @@ diag_mod(main,
         type ==> recursive,
 		embedded_dm ==> busca(juez),
         arcs ==> [
-            encontro(juez,high,si):ve(cerca_mesa)=>wa
+            encontro(juez,si):ve(cerca_mesa)=>wa
         ]
     ],
     [
