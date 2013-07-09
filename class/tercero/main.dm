@@ -21,25 +21,17 @@ diag_mod(main,
         id ==> cu,  
         type ==> walking,
         arcs ==> [
-            llego(cuarto,si):voltea(izquierda)=>me2,
+            llego(cuarto,si):voltea(izquierda)=>rme,
             llego(cuerto,no):esperar=>cu
         ]
     ],
 
     [
-        id ==> me1,  
-        type ==> seeing,
+        id ==> rme,  
+        type ==> recursive,
+		embedded_dm ==> busca(juez),
         arcs ==> [
-            encontro(juez,si):ve(cerca_mesa)=>wa,
-            encontro(juez,no):voltea(derecha)=>me2
-        ]
-    ],
-    [
-        id ==> me2,  
-        type ==> seeing,
-        arcs ==> [
-            encontro(juez,si):ve(cerca_mesa)=>wa,
-            encontro(juez,no):voltea(izquierda)=>me2
+            encontro(juez,high,si):ve(cerca_mesa)=>wa
         ]
     ],
     [

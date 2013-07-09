@@ -46,10 +46,7 @@ diag_mod(main,
 
     [
         id ==> fs,
-        type ==> final,
-        arcs ==> [
-            empty:empty=>empty
-        ]
+        type ==> final
     ]
 ],
 % Local variables
