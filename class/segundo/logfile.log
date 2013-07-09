@@ -1,0 +1,31 @@
+[2013/7/8,21:20:31]Info-Level 1: Running models from     : models
+[2013/7/8,21:20:31]Info-Level 1: Running behaviors from  : behavior
+[2013/7/8,21:20:31]Info-Level 1: Project directory       : .
+[2013/7/8,21:20:31]Info-Level 1: Knowledge base          : tmp
+[2013/7/8,21:20:31]Info-Level 1: User Functions          : user_functions.pl
+[2013/7/8,21:20:31]Info-Level 1: Expectation Types       : expectation_types.pl
+[2013/7/8,21:20:31]Info-Level 1: Basic acts              : basic_actions.pl
+[2013/7/8,21:20:31]Info-Level 1: Templates               : templates.pl
+[2013/7/8,21:20:31]Info-Level 1: Running dialogue        : main
+[2013/7/8,21:20:31]Info-Level 1: Writing debug file to   : logfile.log
+[2013/7/8,21:20:31]Info-Level 1: Saving log file to      : log
+[2013/7/8,21:20:32]Info-Level 1: Starting dialogue: main
+[2013/7/8,21:20:32]Info-Level 1: Saving log in: log/dm.txt
+[2013/7/8,21:20:32]Info-Level 1: Executing dialogue: main
+[2013/7/8,21:20:32]Info-Level 1: Defined local vars: []
+[2013/7/8,21:20:32]Structs: Executing situtation: _38483
+[2013/7/8,21:20:32]Debug: In situation is of type neutral.
+[2013/7/8,21:20:32]Debug: In situation co of type kb.
+[2013/7/8,21:20:35]Info-Level 1: Situation ends
+[2013/7/8,21:20:35]Debug: In situation cu of type walking.
+[2013/7/8,21:20:39]Info-Level 1: Situation ends
+[2013/7/8,21:20:39]Debug: In situation me2 of type seeing.
+[2013/7/8,21:20:45]Info-Level 1: Situation ends
+[2013/7/8,21:20:45]Debug: In situation wa of type walking.
+[2013/7/8,21:20:54]Info-Level 1: Situation ends
+[2013/7/8,21:20:54]Debug: In situation [id==>fs,type==>final,arcs==>[empty:empty=>empty]] of type final.
+[2013/7/8,21:20:54]Info-Level 1: Situation ends
+[2013/7/8,21:20:54]Info-Level 1: Dialogue ends
+[2013/7/8,21:20:54]Info-Level 1: .Output []
+[2013/7/8,21:20:54]Info-Level 1: Ending dialogue: main
+[2013/7/8,21:20:54]Info-Level 1: History: _177606.

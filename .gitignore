@@ -11,3 +11,6 @@ Makefile.in
 /depcomp
 /install-sh
 /missing
+/class/primero/log/*.txt
+/class/segundo/log/*.txt
+logfile.log

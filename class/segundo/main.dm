@@ -13,7 +13,7 @@ diag_mod(main,
         id ==> co,  
         type ==> kb,
         arcs ==> [
-            comienza:entra_cuarto=>cu
+            comienza:ve(cuarto)=>cu
         ]
     ],
 
@@ -21,26 +21,33 @@ diag_mod(main,
         id ==> cu,  
         type ==> walking,
         arcs ==> [
-            entro_cuarto:busca_juez=>me,
-            no_entro_cuarto:esperar=>cu
+            llego(cuarto,si):voltea(izquierda)=>me2,
+            llego(cuerto,no):esperar=>cu
         ]
     ],
 
     [
-        id ==> me,  
+        id ==> me1,  
         type ==> seeing,
         arcs ==> [
-            encontro_juez:ve_mesa=>wa,
-            no_encontro_juez:esperar=>me
+            encontro(juez,si):ve(cerca_mesa)=>wa,
+            encontro(juez,no):voltea(izquierda)=>me2
         ]
     ],
-
+    [
+        id ==> me2,  
+        type ==> seeing,
+        arcs ==> [
+            encontro(juez,si):ve(cerca_mesa)=>wa,
+            encontro(juez,no):voltea(derecha)=>me2
+        ]
+    ],
     [
         id ==> wa,  
         type ==> walking,
         arcs ==> [
-            cerca_mesa:di_informacion=>fs,
-            no_cerca_mesa:esperar=>wa
+            llego(cerca_mesa,si):di(informacion)=>fs,
+            llego(cerca_mesa,no):esperar=>wa
         ]
     ],
 
