@@ -13,7 +13,7 @@ diag_mod(main,
         id ==> co,  
         type ==> kb,
         arcs ==> [
-            comienza:empty=>cu
+            comienza:entra_cuarto=>cu
         ]
     ],
 

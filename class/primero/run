@@ -34,20 +34,5 @@ MESSAGE="logfile.txt"
 SAVE="log"
 GrafLog="tmp"
 
-if [ $# -gt 0 ];
-then
-    case "$1" in
-        run)
-            $SICSTUS -l $SITLOG/src/init --goal start_init. -a -m run -d $MESSAGE --save_dir $SAVE $PROJECT $MAIN $InArg $MODELS $BEHAVIOR $GrafLog 
-            ;;
-        test)
-            $SICSTUS -l $SITLOG/src/init --goal start_init. -a -v structlog -m test -d $MESSAGE --save_dir $SAVE $PROJECT $MAIN $InArg $MODELS $BEHAVIOR $GrafLog
-            ;;
-        *)
-            $SICSTUS -l $SITLOG/src/init --goal start_init. -a  -m run -d $MESSAGE --save_dir $SAVE $PROJECT $MAIN $InArg $MODELS $BEHAVIOR $GrafLog
-            ;;
-    esac
-else
-    sicstus -l $SITLOG/src/init --goal start_init. -a  -m run -v structlog -d $MESSAGE --save_dir $SAVE $PROJECT $MAIN $InArg $MODELS $BEHAVIOR $GrafLog
-fi
+$SICSTUS -l $SITLOG/src/init --goal start_init. -a -v structlog -m test -d $MESSAGE --save_dir $SAVE $PROJECT $MAIN $InArg $MODELS $BEHAVIOR $GrafLog
 

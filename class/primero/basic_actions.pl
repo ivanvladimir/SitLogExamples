@@ -2,18 +2,24 @@
 [
   id ==> entra_cuarto, 
   arity ==> [], 
-  mod ==> start, 
-  break ==> no
-].
-[
-  id ==> entra_cuarto, 
-  arity ==> [], 
-  mod ==> start, 
+  mod ==> none, 
   break ==> no
 ].
 [
   id ==> busca_juez, 
   arity ==> [], 
-  mod ==> start, 
+  mod ==> none, 
+  break ==> no
+].
+[
+  id ==> ve_mesa, 
+  arity ==> [], 
+  mod ==> none, 
+  break ==> no
+].
+[
+  id ==> esperar, 
+  arity ==> [], 
+  mod ==> none, 
   break ==> no
 ].
