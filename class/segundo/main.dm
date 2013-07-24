@@ -39,7 +39,7 @@ diag_mod(main,
         type ==> seeing,
         arcs ==> [
             encontro(juez,si):ve(cerca_mesa)=>wa,
-            encontro(juez,no):voltea(izquierda)=>me2
+            encontro(juez,no):voltea(izquierda)=>me1
         ]
     ],
     [

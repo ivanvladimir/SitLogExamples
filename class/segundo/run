@@ -24,7 +24,7 @@
 
 # Executes dialogue manager
 SICSTUS=/usr/local/bin/sicstus
-SITLOG=/mnt/oldadbekunkus/home/ivanvladimir/projects/golem_iimas/agents/SitLog/
+SITLOG=/home/equipo1/SitLog/
 PROJECT="."
 BEHAVIOR="behavior"
 MODELS="models"
