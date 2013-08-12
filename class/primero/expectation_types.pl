@@ -3,8 +3,8 @@
 % Concrete expectations of application
 empty.
 comienza.
-encontro_mesa.
-no_encontro_mesa.
+encontro_juez.
+no_encontro_juez.
 entro_cuarto.
 no_entro_cuarto.
 cerca_mesa.
