@@ -1,0 +1,64 @@
+% Modelo de la interacción Adivina Que?
+%Sergio Cuevas Ceron
+%Martin Irving Ramirez Fonseca
+%Sebastian Chimal Montes de Oca 
+diag_mod(main, 
+  %First argument: list of situations
+  [
+     [
+	id ==> is,
+        type ==> neutral,
+	arcs ==>
+            [
+              empty: empty=> co
+            ]
+     ],[
+        id ==> co,
+        type ==> recursive, 
+        embedded_dm==>busca([[0,0,0]],[]),
+	arcs==>
+	[
+		identify(Objs_):say('encontre los objetos')=>rec(Objs_)
+	]
+     ],[
+	id==>rec(Objs_),
+	type==>neutral,
+	arcs==>
+	[
+		empty:[screen('el juego ha empezado'), ma([1,1,1])]=>adivina_carta(Objs_)
+	]
+     ],[
+	id==>adivina_carta(Objs_),
+	type==>recursive,embedded_dm==>carta(Objs_), 
+	arcs==>
+	[
+		empty:empty=>fs
+	]
+	],[
+	id==hablar(C),
+	type==>speak,
+	arcs==>
+	[
+		empty:speak(encontre(C))=>fs
+	]
+
+	],[	
+	id==>fs,
+	type==>final
+	]
+	
+  ], % Fin de situaciones
+  % List of Local Variables
+  [
+	x==>' ',
+	y==>' ',
+	angle==>' '
+  ]
+).
+
+
+
+
+
+
+

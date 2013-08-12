@@ -1,0 +1,123 @@
+	diag_mod(carta(Objs_), 
+[
+	[
+		id==>is,
+		type==>neutral,
+		arcs==>
+		[
+			empty:empty=>co
+		]
+
+	],
+	[
+		id==>co, 
+		type==>neutral,
+		arcs==>
+		[
+			empty:say('Now I will ask you some questions')=>random_preguntas
+		]
+	],
+	[
+		id==>random_preguntas,
+		type==>neutral,
+		arcs==>
+		[
+			empty:say('Here come the first')=>no_sabe(Objs_)
+		]
+	],
+	[
+		id==>no_sabe(Objs),
+		type==>neutral,
+		arcs==>
+		[
+			empty:empty=>apply(make_questions(Objs_),[])		
+	]
+	],
+	[
+		id==>sabe(Pregunta,D,Feat),
+		type==>neutral,
+		arcs==>
+		[
+                   empty:[say(Pregunta),sleep]=>evaluacion(D)
+		]
+	 ],
+			
+%	Posible implementacion con ask
+%	[
+%		id==>sabe(Pregunta,D),
+%		type==>recursive, embedded_dm==>ask(Pregunta,X,Result),
+%		arcs==>
+%		[
+%		success(Type):empty==>evaluacion(D)
+%		error(Type,Info):empty==>sabe(Pregunta,D)
+%		]		
+%             escuchar la respuesta.
+%        [
+%   	  id==>respuesta(D),
+	  type==>listen
+	 arcs==>
+         [   
+%
+%
+%
+%
+%
+%
+%
+%
+%
+          [
+          id==>evaluacion(D),
+          type==>neutral,
+          arcs==>
+         [ 
+             empty:[get(Contador,Count),
+                (Count== 2 ->
+                   Sit_sig=ultima(D),
+                   Rcount=0
+                   | otherwise ->
+                   Sit_sig=descartar(D) ,
+                   Rcount is Count + 1
+                   ), set(Contador,Rcount)]=>Sit_sig
+          ]
+],        
+[
+         id==>ultima(D),
+         type==>neutral,
+         arcs==>
+         [
+         empty:empty=>apply(ultima_carta(D),[])
+
+]
+],
+         [
+                id==>descartar(D), %encontroCarta(si))
+                type==>neutral,
+		arcs==>
+		[
+			empty:empty=>apply(descartar_pregunta(D),[])
+		]
+          ],
+	[	id==>test(H), %Situacion de Prueba 
+		type==>neutral,
+		arcs==>
+		[
+			empty:empty=>encontroCarta(si,H)
+		]
+	],	
+	[
+		id==>encontroCarta(si,H),
+		type==>final
+	]
+],
+[ 
+  Contador==>0,
+  X==>'',
+  D==>'',
+  H==>'',
+  Respuesta==>' '
+]
+).
+			
+				
+

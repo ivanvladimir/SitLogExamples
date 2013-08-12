@@ -1,0 +1,33 @@
+%Buscar los objetos
+diag_mod(buscar_obj(Obj),
+[
+    [
+	id ==>is,
+	type ==>neutral,
+	arcs ==>
+		[
+		 empty:empty=>m
+		
+ 		]
+    ],
+
+    [
+	id ==>m,
+	type ==>recursive,
+	embedded_dm ==>identify_object([3],[3],[Obj]	,X),
+	arcs ==>
+		[
+		 success(C):empty =>encontro(Obj,si)
+		
+		 
+		]
+    ],
+    [
+    	id ==>encontro(Obj,si),
+	type ==>final
+    ]
+],
+%Local Variables
+[
+]
+).
