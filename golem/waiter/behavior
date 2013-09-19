@@ -1,0 +1,11 @@
+'../../behaviors/a_clean.dm'.
+'../../behaviors/a_follow.dm'.
+'../../behaviors/a_give.dm'.
+'../../behaviors/a_go.dm'.
+'../../behaviors/a_identify_person.dm'.
+'../../behaviors/a_detect_person.dm'.
+'../../behaviors/a_learn_faces.dm'.
+'../../behaviors/a_memorize_person.dm'. 
+'../../behaviors/a_take.dm'.
+'../../behaviors/a_wait.dm'.
+
