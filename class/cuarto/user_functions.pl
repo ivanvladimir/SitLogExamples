@@ -1,3 +1,25 @@
+% Function next1
+next1([Pt|Pts]):-
+  print(Pt),nl,
+  Res = voltea(Pt),
+  assign_func_value(Res)
+.
+
+next1([Pt|Pts],X,Q):-
+  Res = [di(Q),voltea(Pt)],
+  assign_func_value(Res)
+.
+
+% Function next2
+next2(Obj,[Pt|Pts]):-
+  ( Pts == [] ->
+    Res = encontro(Obj,no)
+  | otherwise ->
+    Res = me(Pts)
+  ),
+  assign_func_value(Res)
+.
+
 % Evaluates the If value in case of true returns TrueVal else FalseVal
 when(If,TrueVal,FalseVal):-
   (If ->

@@ -22,7 +22,7 @@ diag_mod(main,
         type ==> walking,
         arcs ==> [
             llego(cuarto,si):voltea(izquierda)=>rme,
-            llego(cuerto,no):esperar=>cu
+            llego(cuarto,no):esperar=>cu
         ]
     ],
 

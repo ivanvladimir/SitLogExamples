@@ -1,31 +1,23 @@
 % Copyright (c) 2013 Ivan Meza (http://turing.iimas.unma.mx/~ivanvladimir)
-diag_mod(busca(Obj),
+diag_mod(busca(Obj,AllPts),
 [
     [
         id ==> is,  
         type ==> neutral,
         arcs ==> [
-            empty:empty => me1
+            empty: apply(next1(AllPts),[]) => apply(next2(Obj,AllPts),[])
         ]
     ],
     [
-        id ==> me1,  
+        id ==> me(Pts),  
         type ==> seeing,
         arcs ==> [
-            encontro(Obj,Q,X):[di(Q,X),voltea(derecha)]=>me2,
-            encontro(Obj,high,si):ve(cerca_mesa)=>encontro(Obj,si)
+            encontro(Obj,Q,X):apply(next1(Pts,Q,X),[])=>apply(next2(Obj,Pts),[]),
+            encontro(Obj,high,si):empty=>encontro(Obj,si)
         ]
     ],
     [
-        id ==> me2,  
-        type ==> seeing,
-        arcs ==> [
-            encontro(Obj,Q,X):[di(Q,X),voltea(izquierda)]=>me1,
-            encontro(Obj,high,si):ve(cerca_mesa)=>encontro(Obj,high,si)
-        ]
-    ],
-    [
-        id ==> encontro(Obj,si),
+        id ==> encontro(Obj,X),
         type ==> final
     ]
 ],

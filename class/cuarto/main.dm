@@ -21,7 +21,7 @@ diag_mod(main,
         id ==> cu,  
         type ==> walking,
         arcs ==> [
-            llego(cuarto,si):voltea(izquierda)=>rme,
+            llego(cuarto,si):empty=>rme,
             llego(cuerto,no):esperar=>cu
         ]
     ],
@@ -29,8 +29,9 @@ diag_mod(main,
     [
         id ==> rme,  
         type ==> recursive,
-		embedded_dm ==> busca(juez),
+		embedded_dm ==> busca(juez,[izq,der]),
         arcs ==> [
+            encontro(juez,no):empty=>rme,
             encontro(juez,si):ve(cerca_mesa)=>wa
         ]
     ],
